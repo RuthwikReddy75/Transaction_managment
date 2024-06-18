@@ -1,0 +1,68 @@
+.entire{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    border:2px solid black;
+    border-radius:5px;
+    width:400px;
+    padding:20px;
+    background-color: black;
+    color:white;
+}
+.form button{
+    background-color: aquamarine;
+    margin:10px;
+    border-radius: 5px;
+}
+.info{
+    border:2px solid black;
+    margin-top:20px;
+    width:400px;
+    padding:20px;
+    border-radius:5px;
+    background-color: black;
+    color:white;
+}
+
+table,th,tr,td{
+    border:1px solid white;
+    border-collapse: collapse;
+}
+#table{
+    width:200px;
+   
+   
+    
+}
+
+#table1{
+    margin-top: 20px;
+    width:300px;
+    
+   
+   
+}
+.abccredit{
+    background-color: green;
+}
+.abcdebit{
+    background-color: red;
+}
+.heading{
+    text-align: center;
+}
+.sentire{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+
+}
+#s1{
+    color:cadetblue;
+    font-style: italic;
+}
