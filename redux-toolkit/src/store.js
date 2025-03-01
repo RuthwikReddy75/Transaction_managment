@@ -19,7 +19,12 @@ const userslice=createSlice({
              state.balance+=+action.payload
         },
         withdraw:(state,action)=>{
-            state.balance-=action.payload
+            if (state.balance >= action.payload) {
+                state.balance -= action.payload;
+              } else {
+                alert("Insufficient funds");
+              }
+            // state.balance-=action.payload
 
         }
 
