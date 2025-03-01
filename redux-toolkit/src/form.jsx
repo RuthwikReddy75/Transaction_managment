@@ -16,9 +16,10 @@ function Form()
         <div className='form'>
             <h2>Manage Transactions</h2>
             <div id="amount">
-                <input type="number" value={Amount} onChange={(e)=>{
+                <input type="number" value={Amount}  onChange={(e)=>{
                     let v=e.target.value;
                     setAmount(v);
+                    
                 }}></input>
             </div>
             <div id="buttons">
