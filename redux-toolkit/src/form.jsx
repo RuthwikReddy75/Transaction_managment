@@ -1,10 +1,13 @@
 import React,{useState} from 'react';
 import ReactDOM from 'react-dom/client';
-import { useDispatch } from 'react-redux';
+import { useDispatch ,useSelector} from 'react-redux';
+
 import { updatename,updateacno,deposit,withdraw,add} from './store';
 function Form()
 {
     let dispatch=useDispatch();
+    let data=useSelector((state)=>{
+        return state});
     const [Amount,setAmount]=useState(0);
     const [name,setname]=useState("");
     const [acno,setacno]=useState("");
@@ -31,11 +34,14 @@ function Form()
                   }}>deposit</button>
                   <button onClick={()=>{
                     dispatch(withdraw(Amount));
+                   if(!(Amount>data.user.balance))
+                   { 
                     dispatch(add({
                         amount:Amount,
                         time:new Date(),
                         type:"debit"
                     }))
+                } 
                     setAmount(0);
                   }}>withdraw</button><br></br><br></br>
               </div>
